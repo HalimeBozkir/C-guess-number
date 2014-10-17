@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main()
+{
+int a;    //bir tamsayi tanimliyoruz.
+printf("Enter a number to guess mynumber\n");    //kullanicidan bir tamsayi tahmin etmesini istiyoruz.
+scanf("%d",&a);   //tahmin edilen sayiyi basta belirledigimiz degiskene atiyoruz.
+
+while(a!=10){    //tahmin edilen sayi 10 degil ise while dongusunu dondurur.
+
+if(a<10){   //eger tahmini sayi 10'dan kucukse asagidaki ciktiyi ekrana yazdirir.
+printf("You guessed a smaller number\nEnter a number to guess mynumber\n");
+}
+else if(a>10){   //eger tahmini sayi 10'dan buyukse asagidaki ciktiyi ekrana yazdirir.
+printf("You guessed a bigger number\nEnter a number to guess mynumber\n");
+}
+scanf("%d",&a);    //kullanici sayiyi dogru tahmin edemedigi icin tekrar sayi isteyip girilen sayiyi bu satirla aliyoruz.
+}
+if(a==10) printf("You guessed mynumber!!!! congraculations.");   //eger sayi dogruysa donguden cikilir.tebrik mesaji verilir.
+
+return 0;
+}
